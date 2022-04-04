@@ -14,14 +14,11 @@ const routes = [
     name: "PinPAge",
     component: () => import("../views/PinPage.vue"),
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-
-  // }
+  {
+    path: "/pembayaran/:id",
+    name: "Pembayaran",
+    component: () => import("../views/PembayaranTiket.vue"),
+  },
 ];
 
 const router = new VueRouter({

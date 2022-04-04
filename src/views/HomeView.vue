@@ -87,7 +87,10 @@
       <b-col>
         <VueSlickCarousel v-bind="settings">
           <div v-for="item in cardSlider" :key="item.idx">
-            <b-card class="slider-card">
+            <b-card
+              class="slider-card"
+              @click="$router.push('/pembayaran/' + item.id)"
+            >
               <div class="image-card">
                 <img :src="item.img" alt="" />
               </div>
@@ -149,17 +152,20 @@ export default {
         {
           img: "https://asset.kompas.com/crops/5fOXY3K4oKdIzs-F7qNcs0qtt68=/0x0:1430x953/750x500/data/photo/2022/01/17/61e57605c2256.jpg",
           nama: "Lawang Sewu",
-          desc: " Semarang",
+          desc: "Semarang",
+          id: "Lawang_Sewu",
         },
         {
           img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ef/47/1c/borobudur-temple.jpg?w=1200&h=1200&s=1",
           nama: "Candi Borobudur",
           desc: "Magelang",
+          id: "Candi_Borobudur",
         },
         {
           img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlcyW-C-sYE3Nai-y9BbDN4xIYdYcEQ-p18pNb4xgRFxm7xLWLMzwt0-THlARjzuQbELk&usqp=CAU",
           nama: "Sampoo Kong",
           desc: "Semarang",
+          id: "Sampoo_Kong",
         },
       ],
     };
