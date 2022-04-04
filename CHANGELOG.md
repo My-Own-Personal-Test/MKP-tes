@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.4...v0.1.5) (2022-04-04)
+
+
+### Bug Fixes
+
+* replacing pin plugin with basic conditional rendering ([ec667e2](https://github.com/My-Own-Personal-Test/MKP-tes/commit/ec667e225c643ea58e24e5204855320000c895db))
+
 ### [0.1.4](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.3...v0.1.4) (2022-04-04)
 
 
