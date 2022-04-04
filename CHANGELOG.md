@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.3...v0.1.4) (2022-04-04)
+
+
+### Bug Fixes
+
+* done payment page ([aa0066b](https://github.com/My-Own-Personal-Test/MKP-tes/commit/aa0066b562d6c7241cc138f4c869d127b1d80ca9))
+
 ### [0.1.3](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.2...v0.1.3) (2022-04-04)
 
 
