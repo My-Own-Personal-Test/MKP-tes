@@ -97,8 +97,11 @@
         <div>
           <b-row>
             <b-col>
-              <b-card>
-                <h1>123</h1>
+              <b-card class="continue">
+                <span>Rp. 190.000</span>
+              </b-card>
+              <b-card class="button-next">
+                <b-button>Lanjut <b-icon icon="arrow-right"></b-icon></b-button>
               </b-card>
             </b-col>
           </b-row>
@@ -200,5 +203,42 @@ export default {
   justify-content: space-between;
   font-size: 18px;
   font-weight: 600;
+}
+.continue {
+  background-color: rgb(0, 183, 255);
+  border-radius: 10px;
+  width: 90%;
+  color: #fff;
+}
+.continue .card-body {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 22px;
+  font-weight: 700;
+}
+.button-next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 58%;
+  bottom: 3%;
+  width: 35%;
+  height: 50px;
+  margin: auto;
+  border-radius: 8px;
+}
+.button-next .btn {
+  background-color: transparent;
+  color: rgb(0, 183, 255);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.button-next .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
