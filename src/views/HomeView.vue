@@ -24,10 +24,34 @@
     <b-row>
       <b-col>
         <div class="destinations">
-          <div class="provActive">All</div>
-          <div class="prov">Jawa Tengah</div>
-          <div class="prov">Jawa Barat</div>
-          <div class="prov">Jawa Timur</div>
+          <div
+            :class="{ provActive: status === 1 }"
+            class="prov"
+            @click="status = 1"
+          >
+            All
+          </div>
+          <div
+            :class="{ provActive: status === 2 }"
+            class="prov"
+            @click="status = 2"
+          >
+            Jawa Tengah
+          </div>
+          <div
+            :class="{ provActive: status === 3 }"
+            class="prov"
+            @click="status = 3"
+          >
+            Jawa Barat
+          </div>
+          <div
+            :class="{ provActive: status === 4 }"
+            class="prov"
+            @click="status = 4"
+          >
+            Jawa Timur
+          </div>
         </div>
       </b-col>
     </b-row>
@@ -36,16 +60,11 @@
       <b-col>
         <VueSlickCarousel v-bind="bigCarousel">
           <b-card
+            overlay
             class="big-card"
             style="background-color: #fff; border-radius: 8px"
+            img-src="https://sikidang.com/wp-content/uploads/Puri-Grand-Maerokoco.jpg"
           >
-            <div class="big-img">
-              <img
-                src="https://sikidang.com/wp-content/uploads/Puri-Grand-Maerokoco.jpg"
-                alt=""
-              />
-            </div>
-
             <div class="cardSliderBig">
               <b-button>Beli Tiket</b-button>
             </div>
@@ -81,6 +100,14 @@
         </VueSlickCarousel>
       </b-col>
     </b-row>
+
+    <b-row>
+      <b-col>
+        <div style="text-align: left; margin-top: 14px">
+          <span style="font-weight: 700">Pencarian Terakhir</span>
+        </div>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -95,6 +122,7 @@ export default {
   },
   data() {
     return {
+      status: 1,
       settings: {
         dots: false,
         dotsClass: "slick-dots custom-dot-class",
@@ -207,12 +235,12 @@ export default {
   border: none;
   margin-bottom: 3%;
   margin-right: 3%;
-  /* z-index: 10; */
+  z-index: 10;
 }
 .slider-card {
   background-color: white;
   overflow: hidden;
-  width: 80%;
+  width: 85%;
   height: 220px;
   box-shadow: none;
   border-radius: 10px;
