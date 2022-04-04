@@ -108,11 +108,7 @@
 </template>
 
 <script>
-import PincodeInput from "vue-pincode-input";
-import payPassword from "vue-pay-password";
-import "vue-pay-password/dist/vue-pay-password.css";
 export default {
-  components: { PincodeInput, payPassword },
   data() {
     return {
       code: [],
