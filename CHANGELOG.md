@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.2...v0.1.3) (2022-04-04)
+
+
+### Features
+
+* add halaman pembayaran (undone) ([7329764](https://github.com/My-Own-Personal-Test/MKP-tes/commit/7329764b5bdd2010e6b58c57b852e33e81308ff9))
+
 ### [0.1.2](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.1...v0.1.2) (2022-04-04)
 
 
