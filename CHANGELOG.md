@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/My-Own-Personal-Test/MKP-tes/compare/v0.1.1...v0.1.2) (2022-04-04)
+
+
+### Features
+
+* add halaman dashboard ([1d246c6](https://github.com/My-Own-Personal-Test/MKP-tes/commit/1d246c62d6cde17f21bd6bdefea36c8e831a48d4))
+* add home page (not done) ([5162828](https://github.com/My-Own-Personal-Test/MKP-tes/commit/5162828a7e38b36d2a9f5b8de9f305c68265b09c))
+* class binding ([0bab652](https://github.com/My-Own-Personal-Test/MKP-tes/commit/0bab6523207832edcf2dba77fe4ffc98070d5ee2))
+
 ### 0.1.1 (2022-04-02)
 
 
