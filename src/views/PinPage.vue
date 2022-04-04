@@ -21,7 +21,21 @@
           :characterPreview="false"
           :length="6"
         /> -->
-        <payPassword v-model="code" :length="6" :onlyNumber="false" />
+        <!-- <payPassword v-model="code" :length="6" :onlyNumber="false" /> -->
+        <div class="dot-outline">
+          <img v-if="!code[0]" src="../assets/circle.png" alt="" />
+          <img v-else-if="code[0]" src="../assets/record.png" alt="" />
+          <img v-if="!code[1]" src="../assets/circle.png" alt="" />
+          <img v-else-if="code[1]" src="../assets/record.png" alt="" />
+          <img v-if="!code[2]" src="../assets/circle.png" alt="" />
+          <img v-else-if="code[2]" src="../assets/record.png" alt="" />
+          <img v-if="!code[3]" src="../assets/circle.png" alt="" />
+          <img v-else-if="code[3]" src="../assets/record.png" alt="" />
+          <img v-if="!code[4]" src="../assets/circle.png" alt="" />
+          <img v-else-if="code[4]" src="../assets/record.png" alt="" />
+          <img v-if="!code[5]" src="../assets/circle.png" alt="" />
+          <img v-else-if="code[5]" src="../assets/record.png" alt="" />
+        </div>
       </b-col>
     </b-row>
 
@@ -62,13 +76,17 @@
         </b-row>
         <b-row align-h="center">
           <b-col cols="3">
-            <div @click="fingerPrint" class="numpad">F</div>
+            <div @click="fingerPrint" class="finger">
+              <img src="../assets/fingerprint.png" alt="" />
+            </div>
           </b-col>
           <b-col cols="3">
             <div @click="pin('0')" class="numpad">0</div>
           </b-col>
           <b-col cols="3">
-            <div @click="del" class="numpad">Del</div>
+            <div @click="del" class="backspace">
+              <b-icon scale="1.5" icon="backspace"></b-icon>
+            </div>
           </b-col>
         </b-row>
       </b-col>
@@ -76,11 +94,16 @@
 
     <b-row>
       <b-col>
-        <b-button variant="primary" @click="enter" :disabled="loading"
-          >OK</b-button
-        >
+        <b-button @click="enter" :disabled="loading">
+          <span v-if="!loading">OK</span>
+          <b-spinner small v-else></b-spinner>
+        </b-button>
       </b-col>
     </b-row>
+
+    <b-modal id="alert" centered>
+      <p>Your code is {{ code.join().replace(/[,]/g, "") }}</p>
+    </b-modal>
   </b-container>
 </template>
 
@@ -92,27 +115,22 @@ export default {
   components: { PincodeInput, payPassword },
   data() {
     return {
-      code: "",
+      code: [],
       loading: false,
     };
   },
   methods: {
     pin(input) {
-      this.code = this.code.concat(input);
+      this.code.push(input);
     },
     fingerPrint() {
       console.log("fp");
     },
     del() {
-      let codes = this.code.charAt(this.code.length - 1);
-      this.code = this.code.replace(codes, "");
+      this.code.pop();
     },
     enter() {
-      console.log(this.code);
-      this.loading = true;
-      setTimeout(() => {
-        this.loading = false;
-      }, 1000);
+      this.$bvModal.show("alert");
     },
   },
 };
@@ -132,7 +150,24 @@ export default {
   margin-bottom: 10%;
   padding: 20% 0;
 }
-.payPassword div.sixDigitPassword {
-  background: aqua !important;
+.dot-outline {
+  display: flex;
+  justify-content: space-around;
+}
+.dot-outline img {
+  height: 20px;
+}
+.btn {
+  background-color: #00b7ff;
+  border: none;
+}
+.finger {
+  padding: 10%;
+}
+.finger img {
+  height: 40px;
+}
+.backspace {
+  padding: 20% 0;
 }
 </style>

@@ -101,7 +101,9 @@
                 <span>Rp. 190.000</span>
               </b-card>
               <b-card class="button-next">
-                <b-button>Lanjut <b-icon icon="arrow-right"></b-icon></b-button>
+                <b-button @click="$router.push('/pinPage')"
+                  >Lanjut <b-icon icon="arrow-right"></b-icon
+                ></b-button>
               </b-card>
             </b-col>
           </b-row>
